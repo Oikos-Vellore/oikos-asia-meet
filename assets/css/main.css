@@ -1594,6 +1594,11 @@
 		font-weight: 300;
 	}
 
+	b {
+		color: #036;
+		font-weight: 400;
+	}
+
 	em, i {
 		font-style: italic;
 	}
