@@ -3425,6 +3425,94 @@
 		background-attachment: scroll;
 	}
 
+/* Speaker */
+
+	#speaker {
+		background-attachment: fixed;
+		background-color: #ff5050;
+		/*background-image: url("../../images/banner.jpg");*/
+		background-position: center center;
+		background-size: cover;
+		box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
+		min-height: 100vh;
+		position: relative;
+		text-align: center;
+		z-index: 21;
+	}
+
+		#speaker:before {
+			content: '';
+			display: inline-block;
+			height: 100vh;
+			vertical-align: middle;
+			width: 1%;
+		}
+
+		#speaker:after {
+			/*background-image: -moz-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
+			background-image: -webkit-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
+			background-image: -ms-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
+			background-image: linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;*/
+			/*f1eabb*/
+			background: #cc0000;
+			color:#333;
+			content: '';
+			display: block;
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		#speaker .content {
+			display: inline-block;
+			margin-right: 1%;
+			max-width: 95%;
+			padding: 6em;
+			position: relative;
+			text-align: center;
+			vertical-align: middle;
+			z-index: 1;			
+		}
+
+			#speaker .content header {
+				display: inline-block;
+				vertical-align: middle;	
+                
+
+			}
+
+				#speaker .content header h2 {
+					font-size: 2.5em;
+					margin: 0;
+					color: #fff;
+				}
+
+				#speaker .content header p {
+					margin: 0.5em 0 0 0;
+					top: 0;
+					color: #333;
+				}
+
+			#speaker .content .image {
+				border-radius: 100%;
+				display: inline-block;
+				height: 18em;
+				margin-left: 3em;
+				vertical-align: middle;
+				width: 18em;
+			}
+
+				#speaker .content .image img {
+					border-radius: 100%;
+					display: block;
+					width: 100%;
+				}
+
+	body.is-touch #speaker {
+		background-attachment: scroll;
+	}
 /* Footer */
 
 	#footer {
@@ -3532,6 +3620,10 @@
 			#banner .content {
 				padding: 4.5em;
 			}
+        #speaker .content {
+				padding: 4.5em;
+			}
+
 
 		/* Footer */
 
@@ -3611,6 +3703,28 @@
 					}
 
 					#banner .content .image {
+						margin: 0;
+					}
+        #speaker {
+				background-attachment: scroll;
+			}
+
+				#speaker .goto-next {
+					height: 7em;
+				}
+
+				#speaker .content {
+					padding: 9em 0;
+					text-align: center;
+				}
+
+					#speaker .content header {
+						display: block;
+						margin: 0 0 2em 0;
+						text-align: center;
+					}
+
+					#speaker .content .image {
 						margin: 0;
 					}
 
