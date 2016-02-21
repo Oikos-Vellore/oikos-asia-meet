@@ -5,6 +5,8 @@ Website for the #OneWorldConference
 
 If there are any problems or you'd like to suggest changes, open an issue. If you can make changes, fork and send a pull request!
 
+Payment portal handled by explara.com
+
 Landed by HTML5 UP
 [html5up.net] (http://html5up.net/landed) | @n33co
 
