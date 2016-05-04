@@ -63,7 +63,7 @@
     $memberType = $_POST['memberType'];
     $areaOfInterest = $_POST['areaOfInterest'];
     $learningCircle = $_POST['learningCircle'];
-
+    ini_set('display_errors', 1);
     $con = mysqli_connect("localhost", "root", "root", "test");
 
     if(!$con)
