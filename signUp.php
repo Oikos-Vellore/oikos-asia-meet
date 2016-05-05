@@ -25,7 +25,7 @@
 					<h1 id="logo"><a href="index.html">oikos Asia Meet 2016</a></h1>
 					<nav id="nav">
 						<ul>
-							 <li><a href="index.html">Home</a></li>
+				            <li><a href="index.html">Home</a></li>
                             <li><a href="schedule.html">Schedule</a></li>
 							<li><a href="apply.html">Apply</a></li>
                             <li><a href="/pay/index.html">Payment Portal</a></li>
@@ -48,11 +48,10 @@
 					<ul class="copyright">
 						<li>&copy; oikos Vellore. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
-				</footer>
+</footer>
 </body>
+
 </html>
-
-
 <?php
     
     $name = $_POST['name'];
