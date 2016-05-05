@@ -13,14 +13,35 @@
 
     if(!$con)
     {
-        die "Errorororo" . mysqli_error($con);
+        die ("Errorororo") . mysqli_error($con);
     }
     else
     {
         echo "Huyrrah";
     }
-    
-    $query = 'INSERT INTO regInfo ('name', 'phoneNumber', 'email', 'countryResidence', 'whoAreYou', 'memberType', 'areaOfInterest', 'learningCircle') VALUES ('.+.$name.+.', '.+.$phoneNumber.+.', '.+.$email.+.', '.+.$countryResidence.+.', '.+.$whoAreYou.+.', '.+.$memberType.+.', '.+.$areaOfInterest.+.', '.+.$leaningCircle.+.");";
+    //$q = "SELECT * FROM regInfo;" 
+   $query = "'INSERT INTO regInfo
+                (   'name',
+                'phoneNumber',
+                'email',
+                'countryResidence',
+                'whoAreYou',
+                'memberType',
+                'areaOfInterest',
+                'learningCircle'
+                ) 
+                
+                VALUES 
+                ('
+                .$name.', '
+                .$phoneNumber.', '
+                .$email.', '
+                .$countryResidence.', '
+                .$whoAreYou.', '
+                .$memberType.',' 
+                .$areaOfInterest.','
+                .$learningCircle.');'
+                .';'";
 
     $insData = mysqli_query($con, $query);
     if(!$insData)

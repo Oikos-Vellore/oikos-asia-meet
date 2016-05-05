@@ -2,7 +2,7 @@
 <html>
             <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"/>
 <head>
-		<title>About Us</title>
+		<title>Sign Up</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -25,7 +25,7 @@
 					<h1 id="logo"><a href="index.html">oikos Asia Meet 2016</a></h1>
 					<nav id="nav">
 						<ul>
-				            <li><a href="index.html">Home</a></li>
+							 <li><a href="index.html">Home</a></li>
                             <li><a href="schedule.html">Schedule</a></li>
 							<li><a href="apply.html">Apply</a></li>
                             <li><a href="/pay/index.html">Payment Portal</a></li>
@@ -48,7 +48,7 @@
 					<ul class="copyright">
 						<li>&copy; oikos Vellore. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
-</footer>
+				</footer>
 </body>
 
 </html>
@@ -67,19 +67,37 @@
 
     if(!$con)
     {
-        die "Errorororo" . mysqli_error($con);
+        die ("Errorororo") . mysqli_error($con);
     }
     else
     {
         echo "Huyrrah";
     }
-    
-    $query = 'INSERT INTO regInfo ('name', 'phoneNumber', 'email', 'countryResidence', 'whoAreYou', 'memberType', 'areaOfInterest', 'learningCircle') VALUES ('.+.$name.+.', '.+.$phoneNumber.+.', '.+.$email.+.', '.+.$countryResidence.+.', '.+.$whoAreYou.+.', '.+.$memberType.+.', '.+.$areaOfInterest.+.', '.+.$leaningCircle.+.");";
+    $query = "'INSERT INTO regInfo
+                (  name,
+                phoneNumber,
+                email,
+                countryResidence,
+                whoAreYou,
+                memberType,
+                areaOfInterest,
+                learningCircle
+                ) 
+                
+                VALUES 
+                ('
+                .$name.', '
+                .$phoneNumber.', '
+                .$email.', '
+                .$countryResidence.', '
+                .$whoAreYou.', '
+                .$memberType.',' 
+                .$areaOfInterest.','
+                .$learningCircle.');'
+                .';'";
 
     $insData = mysqli_query($con, $query);
-    if(!$insData)
-        echo "Error";
-    else echo "Insertion successful";
+   echo $insData;
     
-    $con->close();
+   mysqli_close($con);
 ?>
